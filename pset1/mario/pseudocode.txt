@@ -1,0 +1,6 @@
+Height: ((Number between 1 and 8))
+checks if number is between 1 and 8
+if no -> keeps asking
+if yes:
+prints _blanks_ and (number) # until reacher the height requested
+e
