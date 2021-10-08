@@ -1,5 +1,3 @@
-// Implements a dictionary's functionality
-
 #include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -44,26 +42,28 @@ bool check(const char *word)
     return false;
 }
 
-// Hashes word to a number
-unsigned int hash(const char *word)
-{
-    /*
-    http://www.cse.yorku.ca/~oz/hash.html
+/**
+ *
+ * https://github.com/hathix/cs50-section/blob/master/code/7/sample-hash-functions/good-hash-function.c
+ *
+ * A case-insensitive implementation of the djb2 hash function.
+ * Change NUM_BUCKETS to whatever your number of buckets is.
+ *
+ * Adapted by Neel Mehta from
+ * http://stackoverflow.com/questions/2571683/djb2-hash-function.
+ */
+ // Hashes word to a number
+unsigned int hash(const char* word)
+ {
+     unsigned long hash = 5381;
 
-    this algorithm (k=33) was first reported by dan bernstein many years ago in comp.lang.c.
-    another version of this algorithm (now favored by bernstein) uses xor: hash(i) = hash(i - 1) * 33 ^ str[i];
-    the magic of number 33 (why it works better than many other constants, prime or not) has never been adequately explained.
-    */
-    unsigned long hash = 5381;
-    int c;
+     for (const char* ptr = word; *ptr != '\0'; ptr++)
+     {
+         hash = ((hash << 5) + hash) + tolower(*ptr);
+     }
 
-    while ((c = *word++))
-    {
-        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
-    }
-    return hash % N;
-
-}
+     return hash % 676;
+ }
 
 // Loads dictionary into memory, returning true if successful else false
 bool load(const char *dictionary)
