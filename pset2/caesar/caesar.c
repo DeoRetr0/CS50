@@ -6,6 +6,7 @@
 
 int isNumeric (const char * n)
 {
+    //checks if given key is a number or some other type of char
     if (n == NULL || *n == '\0' || isspace(*n))
     {
         return 0;
@@ -19,11 +20,11 @@ int isNumeric (const char * n)
 
 int main(int argc, string argv[])
 {
-
+    //checks if the typed text is the compiled program + the key to change the plaintext
     if (argc == 2 && isdigit(*argv[1]) && isNumeric(argv[1]))
     {
 
-        int k = atoi(argv[1]); // get key into int
+        int k = atoi(argv[1]); // get key into variable
 
         string s = get_string("plaintext: ");
         printf("ciphertext: ");

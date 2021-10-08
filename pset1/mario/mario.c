@@ -3,25 +3,25 @@
 
 int main(void)
 {
-    int h; // Declares variable to make it global
+    int height;
 
     do
     {
-        h = get_int("Height:"); // Gets height input
+        height = get_int("Height:"); // Gets height input
     }
-    while (h < 1 || h > 8); // Loops over if the input given matches one of these points
+    while (height < 1 || height > 8); // Loops over if the input given matches one of these points
 
 
-    for (int i = 0; i < h; i++)
+    for (int counter = 0; counter < height; counter++)
     {
-        // Loops over and prints _blank_ (h - 1 - i) times
-        for (int j = h - 1; j > i; j--)
+        // Loops over and prints 'space' (height - counter) times
+        for (int line_space = height - 1; line_space > counter; line_space--)
         {
             printf(" ");
         }
 
-        // Prints # (i + 1) after the blanks
-        for (int k = -1; k < i; k++)
+        // Prints # (counter + 1) after the blanks
+        for (int hash = -1; hash < counter; hash++)
         {
             printf("#");
         }

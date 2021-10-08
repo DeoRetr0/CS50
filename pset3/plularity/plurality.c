@@ -71,7 +71,7 @@ bool vote(string name)
     {
         if (strcmp(candidates[i].name, name) == 0)
         {
-            candidates[i].votes++; // if it does it counts as a vote and saves it in that candidates struct
+            candidates[i].votes++; // if it does, it counts as a vote and saves it in that candidates struct
             return true;
         }
     }

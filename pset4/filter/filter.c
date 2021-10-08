@@ -18,14 +18,14 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // Ensure only one filter
+    //Gets only one filter
     if (getopt(argc, argv, filters) != -1)
     {
         fprintf(stderr, "Only one filter allowed.\n");
         return 2;
     }
 
-    // Ensure proper usage
+    // proper usage
     if (argc != optind + 2)
     {
         fprintf(stderr, "Usage: filter [flag] infile outfile\n");

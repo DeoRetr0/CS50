@@ -84,5 +84,5 @@ int main(int argc, char *argv[])
 
     fclose(img);
     fclose(raw_data);
-    return 0; //Eureka.
+    return 0;
 }

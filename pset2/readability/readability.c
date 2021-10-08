@@ -34,6 +34,7 @@ int main(int argc, string argv[])
 
     float grade = 0.0588 * L - 0.296 * S - 15.8;
 
+    //Prints out the calculated grade of the text
     if (grade < 16 && grade >= 0)
     {
         printf("Grade %i\n", (int) round(grade));
