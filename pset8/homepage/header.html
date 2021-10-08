@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="intro-message">
+                <h1>Hey, I'm Joshua!</h1>
+                <img src="img/eu2.png" alt="Minha foto." height="200" width="200">
+                <h3>I'm a pretend developer and designer<br></h3>
+                <div id="apresentacao" class="container">
+                    <h4>This should be an introduction to myself and my skills!</h4>
+                </div>
+                <hr class="intro-divider">
+                <ul class="list-inline intro-social-buttons">
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github fa-4x"></i></a>
+                    <a href="https://www.linkedin.com/" target="_blank"><i
+                            class="fab fa-linkedin-in fa-4x"></i></a>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var me = document.currentScript.ownerDocument;
+    var post = me.querySelector( '#box' );
+
+    var container = document.querySelectorAll( '.container' );
+
+    //alert( container.length );
+    for(i=0; i<container.length ; i++) {
+        container[i].appendChild( post.cloneNode( true ) );
+    }
+</script>
