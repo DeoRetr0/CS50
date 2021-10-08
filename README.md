@@ -1,5 +1,5 @@
 # CS50
-Código das atividades realizadas durante o curso CS50 feito em 2021.
+Código das atividades realizadas durante o curso CS50 feito em 2021.__
 Alguns problemas e laboratórios em especial estão destacados abaixo e como roda-los.
 
 ## C
