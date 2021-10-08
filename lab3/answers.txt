@@ -1,0 +1,11 @@
+sort1 uses: BUBBLE
+
+How do you know?: Based on performance with reversed arrays
+
+sort2 uses: MERGE
+
+How do you know?: Based on performance with random arrays
+
+sort3 uses: SELECTION
+
+How do you know?: Based on performance with sorted arrays
